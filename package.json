@@ -1,0 +1,22 @@
+{
+  "name": "retoexpress",
+  "version": "1.0.0",
+  "description": "reto",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JPCali/retoExpress.git"
+  },
+  "author": "YUAMPO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JPCali/retoExpress/issues"
+  },
+  "homepage": "https://github.com/JPCali/retoExpress#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
