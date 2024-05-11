@@ -3,6 +3,12 @@ import express from "express";
 
 const app = express();
 
-app.listen(4000, () => {
-  console.log(`Server is running`);
+const PORT = process.env.PORT || 4000;
+
+app.post(`/api/tasks`, (req, res) => {
+  res.status(200).send(`CREATE TASK`);
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port $(PORT)`);
 });
