@@ -17,8 +17,8 @@ app.put(`/api/tasks`, (req, res) => {
   res.status(200).send(`UPDATE TASK`);
 });
 
-app.delete(`/api/tasks`, (req, res) => {
-  res.status(200).send(`DELETE TASK`);
+app.delete(`/api/tasks/:id`, (req, res) => {
+  res.status(200).send(`DELETE TASK ` + req.params.id);
 });
 
 app.listen(PORT, () => {
