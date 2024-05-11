@@ -9,6 +9,18 @@ app.post(`/api/tasks`, (req, res) => {
   res.status(200).send(`CREATE TASK`);
 });
 
+app.get(`/api/tasks`, (req, res) => {
+  res.status(200).send(`GET TASK`);
+});
+
+app.put(`/api/tasks`, (req, res) => {
+  res.status(200).send(`UPDATE TASK`);
+});
+
+app.delete(`/api/tasks`, (req, res) => {
+  res.status(200).send(`DELETE TASK`);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port $(PORT)`);
 });
