@@ -3,18 +3,26 @@ import express from "express";
 
 const app = express();
 
+app.use(express.json());
+
 const PORT = process.env.PORT || 4000;
 
 app.post(`/api/tasks`, (req, res) => {
-  res.status(200).send(`CREATE TASK`);
+  console.log(req.body);
+
+  res.status(200).send(`CREATE TASK `);
 });
 
 app.get(`/api/tasks`, (req, res) => {
-  res.status(200).send(`GET TASK`);
+  res.status(200).send(`GET TASK `);
+});
+
+app.get(`/api/tasks/id`, (req, res) => {
+  res.status(200).send(`GET TASK `);
 });
 
 app.put(`/api/tasks`, (req, res) => {
-  res.status(200).send(`UPDATE TASK`);
+  res.status(200).send(`UPDATE TASK `);
 });
 
 app.delete(`/api/tasks/:id`, (req, res) => {
@@ -22,5 +30,5 @@ app.delete(`/api/tasks/:id`, (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port $(PORT)`);
+  console.log(`Server is running on port $(PORT) `);
 });
